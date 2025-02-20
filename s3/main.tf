@@ -15,9 +15,10 @@ provider "aws" {
 
 
 module "bucket" {
-source = "../../../modules/s3"
-bucket_name = var.bucket_name
-bucket_region = var.bucket_region
-bucket_encryption = var.bucket_encryption
-bucket_versioning_status = var.bucket_versioning_status
+  source  = "app.terraform.io/demodynamics/s3/aws"
+  version = "1.0.0"
+  bucket_name = var.bucket_name
+  bucket_region = var.bucket_region
+  bucket_encryption = var.bucket_encryption
+  bucket_versioning_status = var.bucket_versioning_status
 }
