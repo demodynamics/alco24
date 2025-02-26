@@ -1,6 +1,5 @@
 module "vpc" {
-  source  = "app.terraform.io/demodynamics/vpc/aws"
-  version = "1.0.0"
+  source  = "../../../../../modules/terraform-aws-modules/terraform-aws-vpc"
   project                 = var.project
   vpc_cidr                = var.vpc_cidr
   subnets_count           = var.subnets_count

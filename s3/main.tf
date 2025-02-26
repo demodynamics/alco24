@@ -15,8 +15,7 @@ provider "aws" {
 
 
 module "bucket" {
-  source  = "app.terraform.io/demodynamics/s3/aws"
-  version = "1.0.0"
+  source  = "../../../../modules/terraform-aws-modules/terraform-aws-s3-bucket"
   project_name = var.project_name
   bucket_name = var.bucket_name
   bucket_region = var.bucket_region
