@@ -1,13 +1,14 @@
-my_vpc_name             = "Alco24 VPC"
+project                 = "Alco 24"
 vpc_cidr                = "10.0.0.0/16"
-subnets_count           = 1
+subnets_count           = 2
 subnet_prefix           = 24
-public_subnets_count    = null
+public_subnets_count    = 2
 private_subnets_count   = null
 route_cidr              = "0.0.0.0/0"
 az_count                = 2
 vpc_dns                 = true
 map_public_ip_on_launch = true
+public_route_per_sub    = false
 single_natgw            = false
 natgw_per_az            = false
 natgw_per_subnet        = false
@@ -15,5 +16,5 @@ sg_ports                = [80, 443]
 default_tags = {
   Owner = "Demo Dynamics"
   Environment = "Dev"
-  Project = "Alco24"
+  Project = "Alco 24"
 }

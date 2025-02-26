@@ -1,4 +1,4 @@
-variable "my_vpc_name" {
+variable "project" {
   type = string
 }
 
@@ -65,4 +65,8 @@ variable "sg_ports" {
 variable "default_tags" {
   type = map(string)
   
+}
+
+variable "public_route_per_sub" {
+  type = bool
 }

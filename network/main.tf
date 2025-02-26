@@ -1,7 +1,7 @@
 module "vpc" {
   source  = "app.terraform.io/demodynamics/vpc/aws"
   version = "1.0.0"
-  my_vpc_name             = var.my_vpc_name
+  project                 = var.project
   vpc_cidr                = var.vpc_cidr
   subnets_count           = var.subnets_count
   subnet_prefix           = var.subnet_prefix
@@ -16,4 +16,14 @@ module "vpc" {
   natgw_per_subnet        = var.natgw_per_subnet
   sg_ports                = var.sg_ports
   default_tags            = var.default_tags
+  public_route_per_sub    = var.public_route_per_sub
+}
+
+data "terraform_remote_state" "s3" {
+  backend = "s3"
+  config = {
+    bucket = "alco24"
+    key    = "dev/s3/terraform.tfstate"
+    region = "us-east-1"
+  }
 }

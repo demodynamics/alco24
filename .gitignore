@@ -7,4 +7,3 @@
 *.tfstate.backup
 .terraform.lock.hcl 
 # Ignore projects directory
-projects/
