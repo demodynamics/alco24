@@ -15,7 +15,8 @@ provider "aws" {
 
 
 module "bucket" {
-  source  = "../../../../modules/terraform-aws-modules/terraform-aws-s3-bucket"
+  //source  = "../../../../modules/terraform-aws-modules/terraform-aws-s3-bucket"
+  source  = "git@github.com:demodynamics/terraform-aws-s3.git"
   project_name = var.project_name
   bucket_name = var.bucket_name
   bucket_region = var.bucket_region

@@ -1,5 +1,5 @@
 module "eks" {
-  source  = "../../../../../modules/terraform-aws-modules/terraform-aws-eks"
+  source  = "git@github.com:demodynamics/terraform-aws-eks.git"
   project = var.project
   policy_type = var.policy_type
   role_assumer_type = var.role_assumer_type

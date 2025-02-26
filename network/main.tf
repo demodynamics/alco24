@@ -1,5 +1,5 @@
 module "vpc" {
-  source  = "../../../../../modules/terraform-aws-modules/terraform-aws-vpc"
+  source  = "git@github.com:demodynamics/terraform-aws-vpc.git"
   project                 = var.project
   vpc_cidr                = var.vpc_cidr
   subnets_count           = var.subnets_count
